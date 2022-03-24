@@ -2,10 +2,11 @@ import React from "react";
 
 
 // Creating dummy components for this components
-const PlaceDetails = () => {
+const PlaceDetails = ({place}) => {
     // functional component
     return (
-        <h1> PlaceDetails</h1>
+        // render places and ther names
+        <h1> {place.name}</h1>
     );
 }
 

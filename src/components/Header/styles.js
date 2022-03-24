@@ -2,10 +2,10 @@ import { alpha, makeStyles } from "@material-ui/core/styles";
 
 // we need to export our style so we call it as a function 
 // we need to return an object using another call back function
-export default makeStyles (() => ({
+export default makeStyles ((theme) => ({
 
         // We can add our style now in CSS JS type of way
-        // This wqy is helpful because it gives you a theme object which allows you 
+        // This way is helpful because it gives you a theme object which allows you 
         // to use their colors, padding, ... 
 
         title: {

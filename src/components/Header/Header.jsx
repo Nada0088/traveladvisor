@@ -3,8 +3,14 @@ import { Autocomplete } from "@react-google-maps/api";
 import { AppBar, Toolbar, Typography, InputBase, Box } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 
+
+import useStyles from './styles'; // Hook
+
 // Creating dummy components for this components
 const Header = () => {
+    // calling the hook of style
+    const classes = useStyles();
+
     // functional component
     return (
        //  Layout  for navigation Bar 
@@ -13,24 +19,24 @@ const Header = () => {
             <Toolbar className={classes.toolbar}>
                 {/* every single text element  */}
                 <Typography variant="h5" className={classes.title}>
-                    Travel Advisor
+                    Voyager avec Nous
                 </Typography>
                 
                 <Box display="flex">
                 <Typography variant="h6" className={classes.title}>
-                    Explore new places
+                    Explorez des Nouvelles Places
                 </Typography>
 
-                <Autocomplete>
+               { /* <Autocomplete> */}
                     < div className={classes.search}>
-                        <div className={classes.searchicon}>
-                            <searchicon/>
+                        <div className={classes.searchIcon}>
+                            <SearchIcon/>
                         </div>
-                        <InputBase placeholder="Search..." classes={{root: classes.inputRoot, input: classes.inputinput}}/> {/* classes gonna have double curly brases because we gonna add multiple classes therfore adding an object  */}
+                        <InputBase placeholder="Recherchez..." classes={{root: classes.inputRoot, input: classes.inputInput}}/> {/* classes gonna have double curly brases because we gonna add multiple classes therfore adding an object  */}
 
                     </div>
 
-                </Autocomplete>
+                {/* </Autocomplete> */} 
                 </Box>
 
             </Toolbar>
